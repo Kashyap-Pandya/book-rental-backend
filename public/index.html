@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Documentation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #333;
+      }
+      .route {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #f9f9f9;
+      }
+      .route h2 {
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        color: #0056b3;
+      }
+      .route p {
+        margin: 5px 0;
+      }
+      .route a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .route a:hover {
+        text-decoration: underline;
+      }
+      pre {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        white-space: pre-wrap; /* Preserve formatting */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Documentation</h1>
+    <p>Welcome to the Book Rental API. Here are the available routes:</p>
+
+    <div id="routes"></div>
+
+    <script>
+      // Fetch and insert routes
+      fetch("/api/routes")
+        .then((response) => response.json())
+        .then((data) => {
+          const routesDiv = document.getElementById("routes");
+          data.routes.forEach((route) => {
+            routesDiv.innerHTML += `
+                        <div class="route">
+                            <ul>
+                            <h2>${route.description}</h2>
+                            <p><strong>Method:</strong> ${route.method}</p>
+                            <p><strong>URL:</strong> <a href="${route.link}" target="_blank">${route.link}</a></p>
+                            <p><strong>Example:</strong></p>
+                            <pre>${route.example}</pre>
+                            </ul>
+                        </div>
+                    `;
+          });
+        });
+    </script>
+  </body>
+</html>
