@@ -128,7 +128,7 @@ app.get("/api/routes", (req: Request, res: Response) => {
         method: "GET",
         description: "Get total rent for a book",
         link: `${baseUrl}/api/transactions/book/{bookId}/rent-total`,
-        example: `GET ${baseUrl}/api/transactions/book/5f8a7b2c9d3e1f2a3b4c5d6e/rent-total`,
+        example: `GET ${baseUrl}/api/transactions/book/66e1a44eab9452e69ed6dd4a/rent-total`,
       },
       {
         path: "/api/transactions/user/:userId",
