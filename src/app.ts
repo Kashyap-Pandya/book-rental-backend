@@ -121,7 +121,7 @@ app.get("/api/routes", (req: Request, res: Response) => {
         method: "GET",
         description: "Get transactions for a specific book",
         link: `${baseUrl}/api/transactions/book/{bookId}`,
-        example: `GET ${baseUrl}/api/transactions/book/5f8a7b2c9d3e1f2a3b4c5d6e`,
+        example: `GET ${baseUrl}/api/transactions/book/66e479b949ef2b95cdfaa460`,
       },
       {
         path: "/api/transactions/book/:bookId/rent-total",
@@ -135,7 +135,7 @@ app.get("/api/routes", (req: Request, res: Response) => {
         method: "GET",
         description: "Get transactions for a specific user",
         link: `${baseUrl}/api/transactions/user/{userId}`,
-        example: `GET ${baseUrl}/api/transactions/user/5f8a7b2c9d3e1f2a3b4c5d6f`,
+        example: `GET ${baseUrl}/api/transactions/user/66e199db4a584a4c72b303c1`,
       },
       {
         path: "/api/transactions/date-range",

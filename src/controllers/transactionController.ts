@@ -216,6 +216,12 @@ export const getTransactionsByDateRange = async (
       },
     }).populate("book user");
 
+    // Check if any transactions were found
+    if (transactions.length === 0) {
+      return res.status(404).json({
+        message: "No transactions found for the specified date range",
+      });
+    }
     res.json(transactions);
   } catch (error) {
     if (error instanceof Error && error.name === "InvalidDate") {
