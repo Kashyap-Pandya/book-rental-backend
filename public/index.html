@@ -9,9 +9,11 @@
         font-family: Arial, sans-serif;
         margin: 20px;
         line-height: 1.6;
+        background-color: #e5e7eb;
       }
       h1 {
         color: #333;
+        text-align: center;
       }
       .route {
         margin-bottom: 20px;
@@ -22,8 +24,8 @@
       }
       .route h2 {
         margin: 0 0 10px 0;
-        font-size: 18px;
-        color: #0056b3;
+        font-size: 24px;
+        color: #78716c;
       }
       .route p {
         margin: 5px 0;
@@ -35,18 +37,24 @@
       .route a:hover {
         text-decoration: underline;
       }
+
+      .desc {
+        text-align: center;
+      }
       pre {
         background-color: #f4f4f4;
         padding: 10px;
         border: 1px solid #ddd;
         border-radius: 4px;
-        white-space: pre-wrap; /* Preserve formatting */
+        white-space: pre-wrap;
       }
     </style>
   </head>
   <body>
     <h1>API Documentation</h1>
-    <p>Welcome to the Book Rental API. Here are the available routes:</p>
+    <p class="desc">
+      Welcome to the Book Rental API. Here are the available routes:
+    </p>
 
     <div id="routes"></div>
 
